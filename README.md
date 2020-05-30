@@ -2,7 +2,7 @@
 
 ## Contents
 
-- [Demo](https://github.com/heihaozi/LocalStorageCache/)
+- [Demo](http://heihaozi.github.io/LocalStorageCache/)
 - [Description](#description)
 - [Usage](#usage)
 - [Requirements](#requirements)
