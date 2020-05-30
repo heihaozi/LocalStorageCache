@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+/*
+ * LocalStorageCache Demo
+ * http://heihaozi.github.io/LocalStorageCache/
+ *
+ * Copyright 2020, heihaozi
+ * https://github.com/heihaozi/
+ *
+ * Licensed under the MIT license:
+ * https://opensource.org/licenses/MIT
+ */
+-->
+<html lang="en">
+<head>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <![endif]-->
+    <meta charset="utf-8"/>
+    <title>LocalStorageCache Demo</title>
+    <meta name="description" content="Use localStorage to implement expired cache."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+    <script type="text/javascript" src="js/lsc.js"></script>
+</head>
+<body>
+<h1>LocalStorageCache Demo</h1>
+<p>
+    Use localStorage to implement expired cache.
+</p>
+<ul id="navigation">
+    <li>
+        <a href="https://github.com/heihaozi/LocalStorageCache/">Download</a>
+    </li>
+    <li>
+        <a href="https://github.com/heihaozi/LocalStorageCache/">Source Code</a>
+    </li>
+    <li>
+        <a href="https://github.com/heihaozi/LocalStorageCache/">Documentation</a>
+    </li>
+    <li><a href="https://github.com/heihaozi/">&copy; heihaozi</a></li>
+</ul>
+<div>
+    <p>
+        <label for="setKey">Key:</label>
+        <input id="setKey" value="DemoKey"/>
+    </p>
+    <p>
+        <label for="setValue">Value:</label>
+        <input id="setValue" value="DemoValue"/>
+    </p>
+    <p>
+        <label for="setExpires">Expires:</label>
+        <input id="setExpires" value="5"/>
+    </p>
+    <p>
+        <button id="set" type="button">
+            Set
+        </button>
+    </p>
+    <p>
+    <hr/>
+    </p>
+    <p>
+        <label for="getKey">Key:</label>
+        <input id="getKey" value="DemoKey"/>
+    </p>
+    <p>
+        <button id="get" type="button">
+            Get
+        </button>
+    </p>
+</div>
+<script type="text/javascript">
+    document.getElementById('set').onclick = function (e) {
+        var key = document.getElementById('setKey').value;
+        var val = document.getElementById('setValue').value;
+        var expires = document.getElementById('setExpires').value;
+        lsc.set(key, val, expires);
+        alert('Set successfully!');
+        return false;
+    };
+    document.getElementById('get').onclick = function (e) {
+        var key = document.getElementById('getKey').value;
+        alert('The value is ' + lsc.get(key));
+        return false;
+    };
+</script>
+</body>
+</html>
