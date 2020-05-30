@@ -12,6 +12,8 @@
 
 Use localStorage to implement expired cache.
 
+Use the two strategies of lazy deletion and scheduled deletion to clean up the expired cache.
+
 ## Usage
 
 Include the JavaScript script in your HTML markup:
